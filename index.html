@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crypto Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div>
+            <h1>📊 Crypto Dashboard</h1>
+            <p>BTC + ETH + PAXGUSD + SOLUSD Trading Terminal</p>
+        </div>
+
+        <div class="status">
+            🟢 Market Online
+        </div>
+    </header>
+
+
+    <main class="dashboard">
+
+        <!-- BTC CARD -->
+        <div class="coin-card">
+            <div class="coin-title">
+                <span>₿</span>
+                <div>
+                    <h2>Bitcoin</h2>
+                    <p>BTC / USDT</p>
+                </div>
+            </div>
+
+            <h3 id="btc-price">Loading...</h3>
+            <p class="positive">+0.00%</p>
+        </div>
+
+
+        <!-- ETH CARD -->
+        <div class="coin-card">
+            <div class="coin-title">
+                <span>Ξ</span>
+                <div>
+                    <h2>Ethereum</h2>
+                    <p>ETH / USDT</p>
+                </div>
+            </div>
+
+            <h3 id="eth-price">Loading...</h3>
+            <p class="positive">+0.00%</p>
+        </div>
+
+
+        <!-- PAXG CARD -->
+        <div class="coin-card">
+            <div class="coin-title">
+                <span>🥇</span>
+                <div>
+                    <h2>PAX Gold</h2>
+                    <p>PAXG / USD</p>
+                </div>
+            </div>
+
+            <h3 id="paxg-price">Loading...</h3>
+            <p class="positive">+0.00%</p>
+        </div>
+
+
+        <!-- SOL CARD -->
+        <div class="coin-card">
+            <div class="coin-title">
+                <span>◎</span>
+                <div>
+                    <h2>Solana</h2>
+                    <p>SOL / USD</p>
+                </div>
+            </div>
+
+            <h3 id="sol-price">Loading...</h3>
+            <p class="positive">+0.00%</p>
+        </div>
+
+
+        <!-- CHART -->
+        <section class="chart-panel">
+
+            <div class="panel-header">
+                <div>
+                    <h2>📈 Price Chart</h2>
+                    <p>BTC / USDT</p>
+                </div>
+
+                <div class="timeframes">
+                    <button>1m</button>
+                    <button>5m</button>
+                    <button>15m</button>
+                    <button class="active">1H</button>
+                    <button>4H</button>
+                </div>
+
+                <div class="chart-switch">
+                    <button id="btc-chart-btn" class="active">BTC</button>
+                    <button id="eth-chart-btn">ETH</button>
+                </div>
+            </div>
+
+            <div id="chart-container"
+                 class="chart-placeholder"></div>
+
+        </section>
+
+
+        <!-- VOLUME -->
+        <section class="small-panel">
+
+            <h2>📊 Volume</h2>
+
+            <div id="volume-info">
+                Live volume will appear here
+            </div>
+
+            <div id="volume-alert">
+                Volume Normal
+            </div>
+
+        </section>
+
+
+        <!-- ALERTS -->
+        <section class="small-panel">
+
+            <h2>🔔 Price Alerts</h2>
+
+            <div class="alert-row">
+                <input type="number" placeholder="Enter BTC price">
+                <button>Set Alert</button>
+            </div>
+
+            <div class="alert-row">
+                <input type="number" placeholder="Enter ETH price">
+                <button>Set Alert</button>
+            </div>
+
+        </section>
+
+
+        <!-- NEWS -->
+        <section class="small-panel">
+
+            <h2>📰 Crypto News</h2>
+
+            <div class="news-item">
+                <strong>BTC</strong>
+                <p>Latest Bitcoin news will appear here.</p>
+            </div>
+
+            <div class="news-item">
+                <strong>ETH</strong>
+                <p>Latest Ethereum news will appear here.</p>
+            </div>
+
+        </section>
+
+
+        <!-- AMD -->
+        <section class="small-panel amd-panel">
+
+            <h2>🧠 AMD + Liquidity Helper</h2>
+
+            <div class="amd-grid">
+
+                <div>
+                    <span>Accumulation</span>
+                    <strong>—</strong>
+                </div>
+
+                <div>
+                    <span>Manipulation</span>
+                    <strong>—</strong>
+                </div>
+
+                <div>
+                    <span>Distribution</span>
+                    <strong>—</strong>
+                </div>
+
+                <div>
+                    <span>Liquidity Sweep</span>
+                    <strong>—</strong>
+                </div>
+
+            </div>
+
+            <p class="warning">
+                ⚠️ Analysis helper — not financial advice.
+            </p>
+
+        </section>
+
+
+        <!-- TELEGRAM -->
+        <section class="small-panel">
+
+            <h2>📱 Telegram Alerts</h2>
+
+            <p>Telegram bot connection will be added later.</p>
+
+            <button class="telegram-btn">
+                Connect Telegram
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Crypto Dashboard • BTC + ETH • Trading Tools</p>
+    </footer>
+
+
+    <script
+        type="text/javascript"
+        src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js">
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
